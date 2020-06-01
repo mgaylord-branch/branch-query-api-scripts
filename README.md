@@ -21,7 +21,7 @@ The query scripts will pull commerce data each day for Ad Networks and populate 
 		Note: the names are case sensitive and need to be input exactly as they appear on the Branch dashboard. e.g. Google AdWords *not* Google adwords
 	- Aggregation: Possible values - `revenue`, `total_count`, `unique_count`, `cost` for description of these values, see here: https://help.branch.io/developers-hub/docs/query-api#section-data-selection
 
-![Settings](docs/Settings.png)
+![Settings](images/Settings.png)
 
 4. Once Settings are complete in the sheet, select Tools -> Script Editor from the menu
 5. The script editor will open. Give the project a name e.g. Branch Query Scripts
@@ -42,29 +42,29 @@ function dailyExecution(evt) {
 }
 ```
 
-![Code](docs/Code.png)
+![Code](images/Code.png)
 
 7. Save the script
 8. Select Resources -> Libraries from the menu
 9. In the Add Library section copy and paste this Script ID: 1j5qtnmGRka-wUt96WXEBeWUq_q8r7wvk2UZ4IWttQZPIdl0isKUuGQnk and press Add
 
-![LinkLibrary](docs/LinkLibrary.png)
+![LinkLibrary](images/LinkLibrary.png)
 
 10. Replace the Identifier with `Query` and make sure the latest Version is selected
 
-![LibrarySettings](docs/LibrarySettings.png)
+![LibrarySettings](images/LibrarySettings.png)
 
 11. Press Save
 12. From the menu Select Edit -> Current Project's Triggers
 13. In the new tab that opens: Add a Trigger
 14. Set the Event Source to Time-driven and the Timer to Day Timer (the defaults for time are fine) and press Save
 
-![Trigger](docs/Trigger.png)
+![Trigger](images/Trigger.png)
 
 15. You will need to give permission to the scripts to access your Google account. This is required in order to edit the sheet. Note: If your browser blocks popups, you might need to allow popups in order to run through verification.
 
-![AuthTrigger](docs/AuthTrigger.png)
-![AuthTrigger2](docs/AuthTrigger2.png)
+![AuthTrigger](images/AuthTrigger.png)
+![AuthTrigger2](images/AuthTrigger2.png)
 
 That's it. When the trigger is executed you will see the data appear as separate sheets for each Ad Network. Just add more Ad Networks (Step 3) if you want their data to start showing up.
 
