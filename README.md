@@ -11,21 +11,27 @@ The query scripts will pull commerce data each day for Ad Networks and populate 
 	- Branch Key
 	- Branch Secret
 	- Query Limit
+	- Additional Columns
 	- Ad Networks
+	- Datasource
 	- Aggregation
+	- Filter
 3. For each of those rows, populate with the following:
 	- Branch Key: Retrieve from the Account Settings section of the Branch Dashboard
 	- Branch Secret: Retrieve from the Account Settings section of the Branch Dashboard
 	- Query Limit: Set this by default to 1000 - this is capped at 10 000 rows.
+	- Additional Columns: If you require additional data in the report, please add them in a comma separated list. For more information on the available columns refer to the *dimensions* section of the documentation: https://help.branch.io/developers-hub/docs/query-api#section-data-selection
 	- Ad Networks: Populate with a comma separated list of ad network names. You can retrieve this list from the list from the Branch dashboard under Ads -> Partner Management.
+	- Datasource: A list of datasources can be found here: https://help.branch.io/developers-hub/docs/query-api#section-data-selection
 		Note: the names are case sensitive and need to be input exactly as they appear on the Branch dashboard. e.g. Google AdWords *not* Google adwords
-	- Aggregation: Possible values - `revenue`, `total_count`, `unique_count`, `cost` for description of these values, see here: https://help.branch.io/developers-hub/docs/query-api#section-data-selection
+	- Aggregation: Possible values - `revenue`, `total_count`, `unique_count`, `cost`. If you would like to have multiple aggregations separate them with a comma e.g. `revenue, total_count` For a description of these values, see here: https://help.branch.io/developers-hub/docs/query-api#section-data-selection 
+	- Filter: If you would like to filter the results you can add multiple filters - just be sure that the it is valid JSON. For more information on filters visit: https://help.branch.io/developers-hub/docs/query-api#section-data-selection
 
 ![Settings](images/Settings.png)
 
-4. Once Settings are complete in the sheet, select Tools -> Script Editor from the menu
-5. The script editor will open. Give the project a name e.g. Branch Query Scripts
-6. Replace the function 
+1. Once Settings are complete in the sheet, select Tools -> Script Editor from the menu
+2. The script editor will open. Give the project a name e.g. Branch Query Scripts
+3. Replace the function 
 ```
 myFunction() {
 	
