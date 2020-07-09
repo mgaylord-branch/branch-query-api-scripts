@@ -4,6 +4,8 @@
 
 The query scripts will pull commerce data each day for Ad Networks and populate the Google Sheet accordingly. Currently, you can only do one aggregation at a time.
 
+![Sample](images/Sample.png)
+
 ## Installation:
 
 1. Add a sheet to your Google Sheet and name it Settings
